@@ -10,67 +10,23 @@ const VirtualTour = () => {
     {
       name: 'GSRTC Bus Depot',
       location: 'Ahmedabad',
-      description:
-        'Explore the operations of one of India\'s largest state transport systems. See vintage buses alongside modern electric vehicles.',
-      highlights: [
-        'Vintage bus collection from 1960s-1980s',
-        'Modern electric and CNG buses',
-        'Maintenance facilities tour',
-        'Driver training center',
-      ],
-      audioAvailable: true,
+      description: 'Explore the operations of one of India\'s largest state transport systems.',
+      youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      highlights: ['Vintage bus collection', 'Modern electric buses', 'Maintenance facilities'],
     },
     {
       name: 'Lothal Archaeological Site',
       location: 'Saragwala Village',
-      description:
-        'Walk through the 4,500-year-old ancient port of Lothal, one of the most important sites of the Indus Valley Civilization.',
-      highlights: [
-        'Ancient dockyard structure',
-        'Warehouse ruins',
-        'Trade bead factory',
-        'Museum with artifacts',
-      ],
-      audioAvailable: true,
+      description: 'Walk through the 4,500-year-old ancient port of Lothal.',
+      youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      highlights: ['Ancient dockyard', 'Warehouse ruins', 'Museum artifacts'],
     },
     {
       name: 'Kandla Port',
       location: 'Kutch',
-      description:
-        'Virtual tour of one of India\'s major ports. Witness modern shipping operations and container handling facilities.',
-      highlights: [
-        'Container terminal operations',
-        'Ship loading/unloading process',
-        'Free trade zone overview',
-        'Port control tower',
-      ],
-      audioAvailable: true,
-    },
-    {
-      name: 'Ahmedabad Railway Station',
-      location: 'Ahmedabad',
-      description:
-        'Discover the heritage architecture of this British-era station, now a modern railway junction serving millions.',
-      highlights: [
-        'Victorian-era architecture',
-        'Platform history and evolution',
-        'Modern amenities and facilities',
-        'Railway museum artifacts',
-      ],
-      audioAvailable: true,
-    },
-    {
-      name: 'Sardar Patel International Airport',
-      location: 'Ahmedabad',
-      description:
-        'Behind-the-scenes look at Gujarat\'s premier aviation hub, from terminals to air traffic control.',
-      highlights: [
-        'Modern terminal facilities',
-        'Air traffic control insights',
-        'Aircraft maintenance area',
-        'Cargo handling operations',
-      ],
-      audioAvailable: true,
+      description: 'Virtual tour of one of India\'s major ports.',
+      youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      highlights: ['Container operations', 'Ship loading', 'Free trade zone'],
     },
   ];
 

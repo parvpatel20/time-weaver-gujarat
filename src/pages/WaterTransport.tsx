@@ -1,5 +1,10 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Ship, Anchor, Waves } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Ship, Anchor, Waves, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import kandlaPort from '@/assets/kandla-port.jpg';
+import mundraPort from '@/assets/mundra-port.jpg';
+import lothalPort from '@/assets/lothal-port.jpg';
 
 const WaterTransport = () => {
   const ancientPorts = [
@@ -15,21 +20,28 @@ const WaterTransport = () => {
     },
   ];
 
+  const ancientPortsData = [
+    {
+      ...ancientPorts[0],
+      image: lothalPort,
+      link: '/water-transport'
+    }
+  ];
+
   const modernPorts = [
     {
       name: 'Kandla Port',
       established: '1950s',
       feature: 'Major commercial port, free trade zone',
+      image: kandlaPort,
+      link: '/details/kandla-port'
     },
     {
       name: 'Mundra Port',
       established: '1998',
       feature: 'India\'s largest private port by cargo',
-    },
-    {
-      name: 'Mandvi Port',
-      established: 'Ancient',
-      feature: 'Historic shipbuilding center',
+      image: mundraPort,
+      link: '/water-transport'
     },
   ];
 
@@ -97,18 +109,33 @@ const WaterTransport = () => {
           <h2 className="text-4xl font-display font-bold mb-8">
             Modern Ports & Harbors
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {modernPorts.map((port, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all hover:-translate-y-1">
-                <CardContent className="p-8 space-y-4">
-                  <Anchor className="h-12 w-12 text-accent" />
-                  <h3 className="text-2xl font-display font-bold">{port.name}</h3>
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={port.image}
+                    alt={port.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+                </div>
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-2xl font-display font-bold group-hover:text-accent transition-colors">
+                    {port.name}
+                  </h3>
                   <div className="space-y-2">
                     <p className="text-sm text-muted-foreground">
                       Established: <span className="font-semibold text-foreground">{port.established}</span>
                     </p>
-                    <p className="text-base">{port.feature}</p>
+                    <p className="text-base text-muted-foreground">{port.feature}</p>
                   </div>
+                  <Link to={port.link}>
+                    <Button variant="outline" className="w-full group/btn">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

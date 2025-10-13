@@ -1,5 +1,9 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Train, Zap, Calendar } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Train, Zap, Calendar, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import ahmedabadJunction from '@/assets/ahmedabad-junction.jpg';
+import vadodaraJunction from '@/assets/vadodara-junction.jpg';
 
 const RailTransport = () => {
   const milestones = [
@@ -10,9 +14,18 @@ const RailTransport = () => {
   ];
 
   const stations = [
-    { name: 'Ahmedabad Junction', heritage: 'British-era architecture, major junction' },
-    { name: 'Vadodara Junction', heritage: 'Historic station with royal connections' },
-    { name: 'Surat Station', heritage: 'Key commercial transport hub' },
+    { 
+      name: 'Ahmedabad Junction', 
+      heritage: 'British-era architecture, Western Railway headquarters',
+      image: ahmedabadJunction,
+      link: '/details/ahmedabad-junction'
+    },
+    { 
+      name: 'Vadodara Junction', 
+      heritage: 'Historic station with royal Indo-Saracenic architecture',
+      image: vadodaraJunction,
+      link: '/rail-transport'
+    },
   ];
 
   return (
@@ -71,13 +84,28 @@ const RailTransport = () => {
           <h2 className="text-4xl font-display font-bold mb-8">
             Heritage Railway Stations
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {stations.map((station, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all hover:-translate-y-1">
-                <CardContent className="p-8 space-y-4">
-                  <Train className="h-12 w-12 text-accent" />
-                  <h3 className="text-2xl font-display font-bold">{station.name}</h3>
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={station.image}
+                    alt={station.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+                </div>
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-2xl font-display font-bold group-hover:text-accent transition-colors">
+                    {station.name}
+                  </h3>
                   <p className="text-muted-foreground">{station.heritage}</p>
+                  <Link to={station.link}>
+                    <Button variant="outline" className="w-full group/btn">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

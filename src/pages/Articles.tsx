@@ -102,10 +102,12 @@ const Articles = () => {
             <p className="text-lg text-foreground leading-relaxed mb-6 max-w-4xl">
               {articles[0].excerpt}
             </p>
-            <Button size="lg" className="group">
-              Read Full Article
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/articles/gujarat-trade-gateway">
+              <Button size="lg" className="group">
+                Read Full Article
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </CardContent>
         </Card>
 
@@ -139,10 +141,12 @@ const Articles = () => {
                   </span>
                 </div>
                 <p className="text-muted-foreground">{article.excerpt}</p>
-                <Button variant="outline" className="group/btn">
-                  Read More
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                <Link to="/articles">
+                  <Button variant="outline" className="group/btn w-full">
+                    Read More
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}

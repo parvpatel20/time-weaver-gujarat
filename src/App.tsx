@@ -39,9 +39,13 @@ const App = () => (
               <Route path="/archives" element={<Archives />} />
               <Route path="/articles" element={<Articles />} />
               <Route path="/virtual-tour" element={<VirtualTour />} />
-              <Route path="/quiz" element={<Quiz />} />
-              <Route path="/about" element={<About />} />
-              <Route path="*" element={<NotFound />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/details/nh8" element={<NH8Detail />} />
+            <Route path="/details/ahmedabad-junction" element={<AhmedabadJunctionDetail />} />
+            <Route path="/details/kandla-port" element={<KandlaPortDetail />} />
+            <Route path="/articles/gujarat-trade-gateway" element={<GujaratTradeGateway />} />
+            <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </BrowserRouter>

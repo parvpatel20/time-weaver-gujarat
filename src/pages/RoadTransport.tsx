@@ -1,6 +1,10 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Truck, Bus, Car } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Truck, Bus, Car, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import vintageCart from '@/assets/vintage-bullock-cart.jpg';
+import nh8Image from '@/assets/nh8-highway.jpg';
+import gsrtcDepot from '@/assets/gsrtc-depot.jpg';
 
 const RoadTransport = () => {
   const timeline = [
@@ -11,9 +15,18 @@ const RoadTransport = () => {
   ];
 
   const highways = [
-    { name: 'NH-8', description: 'Delhi-Mumbai highway passing through Gujarat' },
-    { name: 'NH-47', description: 'Ahmedabad-Rajkot corridor' },
-    { name: 'Expressways', description: 'Modern expressways connecting major cities' },
+    { 
+      name: 'NH-8', 
+      description: 'Delhi-Mumbai highway passing through Gujarat',
+      image: nh8Image,
+      link: '/details/nh8'
+    },
+    { 
+      name: 'GSRTC Network', 
+      description: 'Gujarat State Road Transport Corporation bus network',
+      image: gsrtcDepot,
+      link: '/road-transport'
+    },
   ];
 
   return (
@@ -60,15 +73,30 @@ const RoadTransport = () => {
         {/* Major Highways */}
         <section className="mb-20">
           <h2 className="text-4xl font-display font-bold mb-8">
-            Major Highways
+            Major Highways & Transport Networks
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {highways.map((highway, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all hover:-translate-y-1">
-                <CardContent className="p-8 text-center space-y-3">
-                  <Truck className="h-12 w-12 mx-auto text-accent" />
-                  <h3 className="text-2xl font-display font-bold">{highway.name}</h3>
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={highway.image}
+                    alt={highway.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+                </div>
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-2xl font-display font-bold group-hover:text-accent transition-colors">
+                    {highway.name}
+                  </h3>
                   <p className="text-muted-foreground">{highway.description}</p>
+                  <Link to={highway.link}>
+                    <Button variant="outline" className="w-full group/btn">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

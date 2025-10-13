@@ -81,36 +81,31 @@ const Home = () => {
       </section>
 
       {/* Interactive Timeline Section */}
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-display font-bold text-center mb-12">
+      <section className="py-20 bg-gradient-to-b from-card to-background relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-vintage-paper" />
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-5xl font-display font-bold text-center mb-16 animate-fade-in">
             India's Transport Milestones
           </h2>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-border" />
-            <div className="space-y-12">
+          <div className="relative max-w-6xl mx-auto">
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-accent via-accent to-transparent animate-pulse-glow" />
+            <div className="space-y-16">
               {[
-                { year: '2600 BCE', event: 'Indus Valley boats and trade networks', side: 'left' },
-                { year: '1500s', event: 'Bullock carts dominate land transport', side: 'right' },
-                { year: '1853', event: 'First railway line in India', side: 'left' },
-                { year: '1932', event: 'Air India founded (formerly Tata Airlines)', side: 'right' },
-                { year: '2023', event: 'Bullet Train corridor announced', side: 'left' },
+                { year: '2600 BCE', event: 'Indus Valley boats and trade networks', icon: '⚓', side: 'left' },
+                { year: '1500s', event: 'Bullock carts dominate land transport', icon: '🐂', side: 'right' },
+                { year: '1853', event: 'First railway line in India', icon: '🚂', side: 'left' },
+                { year: '1932', event: 'Air India founded (formerly Tata Airlines)', icon: '✈️', side: 'right' },
+                { year: '2023', event: 'Bullet Train corridor announced', icon: '🚄', side: 'left' },
               ].map((milestone, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center ${
-                    milestone.side === 'left' ? 'justify-start' : 'justify-end'
-                  } animate-fade-in`}
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <Card className={`w-5/12 ${milestone.side === 'right' ? 'text-right' : ''}`}>
-                    <CardContent className="p-6">
-                      <div className="text-2xl font-display font-bold text-accent mb-2">
-                        {milestone.year}
-                      </div>
-                      <p className="text-foreground">{milestone.event}</p>
+                <div key={index} className={`flex items-center ${milestone.side === 'left' ? 'justify-start' : 'justify-end'} animate-fade-in`} style={{ animationDelay: `${index * 0.15}s` }}>
+                  <Card className={`w-5/12 group hover:shadow-2xl hover:scale-105 transition-all duration-500 ${milestone.side === 'right' ? 'text-right' : ''} bg-gradient-to-br from-card to-accent/5 border-accent/20`}>
+                    <CardContent className="p-8 relative overflow-hidden">
+                      <div className="absolute top-0 right-0 text-8xl opacity-5">{milestone.icon}</div>
+                      <div className="text-4xl font-display font-bold text-accent mb-3 group-hover:scale-110 transition-transform">{milestone.year}</div>
+                      <p className="text-lg text-foreground font-medium">{milestone.event}</p>
                     </CardContent>
                   </Card>
+                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-accent border-4 border-background shadow-lg animate-pulse-glow`} style={{ top: `${index * 16 + 8}rem` }} />
                 </div>
               ))}
             </div>
