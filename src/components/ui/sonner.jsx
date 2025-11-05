@@ -1,8 +1,8 @@
-import { useTheme } from "next-themes";
 import { Toaster as SonnerToaster, toast } from "sonner";
 
 const Toaster = ({ ...props }) => {
-  const { theme = "system" } = useTheme();
+  // Force dark theme for Sonner to match site
+  const theme = 'dark';
 
   // Provide sensible default class names for Sonner's parts
   const description = "text-sm text-muted-foreground";

@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useTheme } from '@/contexts/ThemeContext';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
-  const { theme, toggleTheme } = useTheme();
+  // Theme is forced to dark globally; remove runtime toggle
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,7 +17,7 @@ const Navigation = () => {
     { name: 'Gallery', path: '/gallery' },
     { name: 'Archives', path: '/archives' },
     { name: 'Articles', path: '/articles' },
-    { name: 'Virtual Tour', path: '/virtual-tour' },
+    // { name: 'Virtual Tour', path: '/virtual-tour' },
     { name: 'Quiz', path: '/quiz' },
     { name: 'About', path: '/about' },
   ];
@@ -58,22 +57,8 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Theme Toggle & Mobile Menu Button */}
+          {/* Mobile Menu Button */}
           <div className="flex items-center space-x-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              className="rounded-full hover:bg-accent/10 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'light' ? (
-                <Moon className="h-5 w-5" />
-              ) : (
-                <Sun className="h-5 w-5" />
-              )}
-            </Button>
-
             <Button
               variant="ghost"
               size="icon"

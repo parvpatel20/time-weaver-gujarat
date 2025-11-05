@@ -2,21 +2,26 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext(undefined);
 
+// Force dark-only theme. This provider ensures the site always uses the
+// dark variables and prevents toggling to light. toggleTheme is a noop so
+// components calling it won't break.
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('theme');
-    return saved || 'light';
-  });
+  const theme = 'dark';
 
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-    root.classList.add(theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    // remove any light class and enforce dark
+    root.classList.remove('light');
+    root.classList.add('dark');
+    try {
+      localStorage.setItem('theme', 'dark');
+    } catch (e) {
+      // ignore (e.g., SSR or storage disabled)
+    }
+  }, []);
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    // noop - dark only
   };
 
   return (

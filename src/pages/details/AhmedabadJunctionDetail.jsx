@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Building, Calendar, Users } from 'lucide-react';
+import { ArrowLeft, Building, Calendar, Users, MapPin, Train, Landmark } from 'lucide-react';
 import stationImage from '@/assets/ahmedabad-junction.jpg';
 
 const AhmedabadJunctionDetail = () => {
@@ -21,7 +21,7 @@ const AhmedabadJunctionDetail = () => {
               Ahmedabad Railway Junction
             </h1>
             <p className="text-xl text-muted-foreground italic font-display">
-              Gateway to Gujarat's Railway Network
+              Gateway to Gujarat’s Railway Network
             </p>
           </div>
 
@@ -56,72 +56,127 @@ const AhmedabadJunctionDetail = () => {
               <div className="prose prose-lg max-w-none">
                 <h2 className="text-3xl font-display font-bold mb-4">Historical Background</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Ahmedabad Railway Junction, also known as Kalupur Railway Station, is one of the oldest 
-                  railway stations in India. Built during the British era in 1863, it showcases magnificent 
-                  Victorian architecture with red brick construction and ornate details that reflect the 
-                  grandeur of 19th-century railway engineering.
+                  Ahmedabad Railway Junction, also known as Kalupur Railway Station, is one of India’s
+                  oldest and most significant railway stations. Built during the British era in 1863,
+                  it was a part of the Bombay, Baroda, and Central India Railway (BB&CI). Its grand
+                  design symbolizes the era when railway architecture reflected both functionality and
+                  colonial grandeur.
                 </p>
 
                 <h2 className="text-3xl font-display font-bold mb-4 mt-8">Architectural Heritage</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  The station building is a fine example of British colonial architecture, featuring:
+                  The station’s architectural beauty combines practicality with British Victorian charm:
                 </p>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">✦</span>
-                    <span>Distinctive red brick facade with arched windows and doorways</span>
+                    <span>Red-brick facade with arched corridors and tall columns.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">✦</span>
-                    <span>Victorian-style clock tower visible from across the city</span>
+                    <span>Victorian-style clock tower that has become a city landmark.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">✦</span>
-                    <span>Ornamental ironwork and decorative elements typical of the era</span>
+                    <span>Cast-iron railings, large wooden doors, and stone-carved motifs.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">✦</span>
-                    <span>High ceilings and spacious waiting halls designed for tropical climate</span>
+                    <span>High ceilings and well-ventilated halls suited for Gujarat’s tropical climate.</span>
                   </li>
                 </ul>
 
                 <h2 className="text-3xl font-display font-bold mb-4 mt-8">Strategic Importance</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  As the headquarters of the Western Railway zone, Ahmedabad Junction serves as a critical 
-                  hub connecting Gujarat to major cities across India. The station handles over 150 trains 
-                  daily, including express trains, superfast services, and local passenger trains.
+                  Ahmedabad Junction is the headquarters of Western Railway and serves as a vital link
+                  connecting Gujarat to every major region of India. It handles more than 150 trains daily
+                  — from luxury expresses like Shatabdi and Tejas to freight services powering the state’s
+                  industries. The station acts as a bridge between the industrial west and the cultural north.
                 </p>
 
                 <h2 className="text-3xl font-display font-bold mb-4 mt-8">Major Connections</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  The junction provides direct connectivity to:
+                  The junction offers seamless connectivity to:
                 </p>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">✦</span>
-                    <span>Mumbai, Delhi, Kolkata, Chennai - Major metro cities</span>
+                    <span>Mumbai, Delhi, Kolkata, Chennai – Pan-India metros</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">✦</span>
-                    <span>Jaipur, Udaipur, Jodhpur - Rajasthan tourist circuits</span>
+                    <span>Jaipur, Jodhpur, Udaipur – Rajasthan’s royal destinations</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">✦</span>
-                    <span>Vadodara, Surat, Rajkot - Gujarat industrial centers</span>
+                    <span>Surat, Vadodara, Rajkot – Gujarat’s key industrial zones</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">✦</span>
-                    <span>Pune, Indore, Bhopal - Central India</span>
+                    <span>Pune, Indore, Bhopal – Central India connectivity</span>
                   </li>
                 </ul>
 
-                <h2 className="text-3xl font-display font-bold mb-4 mt-8">Modern Amenities</h2>
+                <h2 className="text-3xl font-display font-bold mb-4 mt-8">Location & Accessibility</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  While preserving its heritage architecture, the station has been upgraded with modern facilities 
-                  including air-conditioned waiting rooms, food courts, digital displays, Wi-Fi connectivity, 
-                  and improved passenger amenities. The station also houses the Railway Museum showcasing the 
-                  history of Indian Railways.
+                  Located in the Kalupur area of Ahmedabad, the station is centrally positioned and easily
+                  accessible from every part of the city. The Ahmedabad Metro (Kalupur station) connects directly,
+                  and major bus routes, taxis, and app-based cabs make commuting smooth for travelers. It is just
+                  9 km away from Sardar Vallabhbhai Patel International Airport.
                 </p>
+
+                <h2 className="text-3xl font-display font-bold mb-4 mt-8">Facilities Overview</h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Despite its vintage appearance, the station is equipped with state-of-the-art passenger facilities:
+                </p>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <Train className="h-5 w-5 text-accent mt-1" />
+                    <span>Digital information boards and real-time train status displays</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Train className="h-5 w-5 text-accent mt-1" />
+                    <span>Air-conditioned waiting halls and premium lounges</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Train className="h-5 w-5 text-accent mt-1" />
+                    <span>Wi-Fi-enabled premises with charging zones and kiosks</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Train className="h-5 w-5 text-accent mt-1" />
+                    <span>Food courts, bookstalls, and heritage café in the concourse area</span>
+                  </li>
+                </ul>
+
+                <h2 className="text-3xl font-display font-bold mb-4 mt-8">Future Developments</h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Ahmedabad Junction is part of India’s modernization initiatives under Amrit Bharat Station Scheme.
+                  Plans include redevelopment with smart ticketing, multi-level parking, and integration with the
+                  upcoming Mumbai–Ahmedabad Bullet Train corridor, making it one of the most advanced stations in Western India.
+                </p>
+
+                <h2 className="text-3xl font-display font-bold mb-4 mt-8">Nearby Attractions</h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Within a short radius, travelers can explore Ahmedabad’s cultural richness:
+                </p>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <Landmark className="h-5 w-5 text-accent mt-1" />
+                    <span>Sabarmati Ashram – The peaceful home of Mahatma Gandhi</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Landmark className="h-5 w-5 text-accent mt-1" />
+                    <span>Manek Chowk – Famous for its night street food market</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Landmark className="h-5 w-5 text-accent mt-1" />
+                    <span>Teen Darwaza & Bhadra Fort – Heritage structures from medieval Ahmedabad</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Landmark className="h-5 w-5 text-accent mt-1" />
+                    <span>Law Garden Market – Known for local handicrafts and traditional attire</span>
+                  </li>
+                </ul>
               </div>
             </CardContent>
           </Card>
@@ -131,11 +186,12 @@ const AhmedabadJunctionDetail = () => {
               <h3 className="text-2xl font-display font-bold mb-4">Did You Know?</h3>
               <ul className="space-y-3">
                 {[
-                  'The station is named after the Kalupur area where it is located',
-                  'It was built by the Bombay, Baroda and Central India Railway company',
-                  'The station building is over 160 years old and is a protected heritage structure',
-                  'Western Railway headquarters located here manages one of India\'s busiest railway zones',
-                  'The station is being developed to become a stop on India\'s first bullet train corridor',
+                  'The station is named after the Kalupur locality in Ahmedabad.',
+                  'It was part of the Bombay, Baroda and Central India Railway established in 1855.',
+                  'The building’s heritage facade is protected under the Archaeological Department.',
+                  'It manages operations for the entire Western Railway zone headquartered here.',
+                  'The upcoming bullet train corridor will connect Mumbai to Ahmedabad in just 2 hours.',
+                  'The station’s architecture has inspired several modern railway terminal designs in India.',
                 ].map((fact, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-accent text-2xl">✦</span>

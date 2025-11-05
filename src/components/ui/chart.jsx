@@ -4,7 +4,8 @@ import * as RechartsPrimitive from "recharts";
 import { cn } from "@/lib/utils";
 
 // Format: { THEME_NAME: CSS_SELECTOR }
-const THEMES = { light: "", dark: "" };
+// We only support dark mode site-wide; provide selector mapping for dark.
+const THEMES = { dark: ".dark" };
 
 const ChartContext = React.createContext(null);
 
