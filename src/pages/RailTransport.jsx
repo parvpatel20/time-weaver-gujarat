@@ -77,66 +77,100 @@ const RailTransport = () => {
       name: 'Ahmedabad Junction',
       established: '1864',
       description: 'The primary railway station and headquarters of Western Railway zone. Built during the British era with impressive Victorian architecture.',
-      features: ['Heritage building', 'Western Railway HQ', 'Major junction', 'Historic platforms']
+      features: ['Heritage building', 'Western Railway HQ', 'Major junction', 'Historic platforms'],
+      slug: 'ahmedabad-junction',
+      imageUrl: '/src/assets/ahm_junc.png' // Placeholder
     },
     {
       name: 'Vadodara Junction',
       established: '1875',
       description: 'Historic railway station featuring Indo-Saracenic architecture. Built during the princely state era, maintaining its royal heritage.',
-      features: ['Royal architecture', 'Strategic junction', 'Heritage monument', 'International heritage site']
+      features: ['Royal architecture', 'Strategic junction', 'Heritage monument', 'International heritage site'],
+      slug: 'vadodara-junction',
+      imageUrl: '/src/assets/vadodara_junc.png' // Placeholder
     },
     {
       name: 'Surat Railway Station',
       established: '1880',
       description: 'Important junction connecting southern Gujarat to northern India. Serves as gateway to South Gujarat region.',
-      features: ['Major junction', 'Port connectivity', 'Commercial hub', 'Passenger traffic center']
+      features: ['Major junction', 'Port connectivity', 'Commercial hub', 'Passenger traffic center'],
+      slug: 'surat-railway-station',
+      imageUrl: '/src/assets/Surat_junc.png' // Placeholder
+
     },
     {
       name: 'Rajkot Junction',
       established: '1899',
       description: 'Key railway station in western Gujarat connecting to major industrial and agricultural areas.',
-      features: ['Regional hub', 'Industrial connectivity', 'Freight center', 'Agricultural trade']
+      features: ['Regional hub', 'Industrial connectivity', 'Freight center', 'Agricultural trade'],
+      slug: 'rajkot-junction',
+      imageUrl: '/src/assets/Rajkot_junc.png' // Placeholder
     }
   ];
 
   const railwayLines = [
-    {
-      name: 'Mumbai-Ahmedabad Line',
-      length: '536 km',
-      established: '1881',
-      significance: 'Primary trunk route connecting two major metropolitan areas',
-      traffic: 'Heavy passenger and freight traffic',
-      slug: 'mumbai-ahmedabad-line'
-      ,imageUrl: '/src/assets/mumbai_ahmedabad_placeholder.jpg'
-    },
-    {
-      name: 'Ahmedabad-Vadodara-Bombay',
-      length: '175 km',
-      established: '1864',
-      significance: 'One of India\'s oldest and busiest railway corridors',
-      traffic: 'Millions of passengers annually',
-      slug: 'ahmedabad-vadodara-bombay'
-      ,imageUrl: '/src/assets/ahmedabad_vadodara_placeholder.jpg'
-    },
-    {
-      name: 'Gujarat Broad Gauge Network',
-      length: '5,000+ km',
-      established: 'Continuous expansion from 1860s',
-      significance: 'Comprehensive network connecting all major cities',
-      traffic: 'Pan-state connectivity',
-      slug: 'gujarat-broad-gauge'
-      ,imageUrl: '/src/assets/gujarat_broad_gauge_placeholder.jpg'
-    },
-    {
-      name: 'Western Dedicated Freight Corridor',
-      length: '1,500+ km',
-      established: '2019 onwards',
-      significance: 'Modern freight transport optimized for logistics',
-      traffic: 'Containers, coal, agriculture, manufactured goods',
-      slug: 'western-dfc'
-      ,imageUrl: '/src/assets/western_dfc_placeholder.jpg'
-    }
-  ];
+  {
+    name: 'Mumbai-Ahmedabad Line',
+    length: '536 km',
+    established: '1881',
+    significance: 'Primary trunk route connecting two major metropolitan areas',
+    traffic: 'Heavy passenger and freight traffic',
+    slug: 'mumbai-ahmedabad-line',
+    imageUrl: '/src/assets/mumbai_ahmedabad_placeholder.jpg',
+    features: [
+      'First major BB&CI Railway route',
+      'Electrified double line',
+      'Upcoming bullet train corridor',
+      'Supports textile and trade transport'
+    ]
+  },
+  {
+    name: 'Ahmedabad-Vadodara-Bombay',
+    length: '175 km',
+    established: '1864',
+    significance: 'One of India\'s oldest and busiest railway corridors',
+    traffic: 'Millions of passengers annually',
+    slug: 'ahmedabad-vadodara-bombay',
+    imageUrl: '/src/assets/ahmedabad_vadodara_placeholder.jpg',
+    features: [
+      'Part of early BB&CI line',
+      'Key to Gujarat’s industrial growth',
+      'Heritage stations like Vadodara',
+      'Known for Shatabdi Express',
+    ]
+  },
+  {
+    name: 'Gujarat Broad Gauge Network',
+    length: '5,000+ km',
+    established: '1860s onwards',
+    significance: 'Comprehensive network connecting all major cities',
+    traffic: 'Pan-state connectivity',
+    slug: 'gujarat-broad-gauge',
+    imageUrl: '/src/assets/gujarat_broad_gauge_placeholder.jpg',
+    features: [
+      'Covers all major cities',
+      'Converted under Project Unigauge',
+      'Connects ports like Kandla & Mundra',
+      'Backbone of Gujarat rail transport'
+    ]
+  },
+  {
+    name: 'Western Dedicated Freight Corridor',
+    length: '1,500+ km',
+    established: '2019 onwards',
+    significance: 'Modern freight transport optimized for logistics',
+    traffic: 'Containers, coal, agriculture, goods',
+    slug: 'western-dfc',
+    imageUrl: '/src/assets/western_dfc_placeholder.jpg',
+    features: [
+      'Freight-only electrified corridor',
+      'Reduces road congestion',
+      'Boosts Gujarat’s industrial hubs',
+      'Part of national DFC project'
+    ]
+  }
+];
+
 
   const economicImpact = [
     {
@@ -299,34 +333,34 @@ const RailTransport = () => {
           </div>
         </section>
 
-        {/* Railway Lines */}
+        {/* Heritage Railway Stations (Road-style cards) */}
         <section className="mb-24">
-          <h2 className="text-4xl font-extrabold mb-12 text-center">Major Railway Lines & Routes</h2>
+          <h2 className="text-4xl font-extrabold mb-12 text-center">Heritage Railway Stations</h2>
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-            {railwayLines.map((line, index) => (
+            {majorStations.map((station, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden bg-card border-border">
                 <div className="relative h-40 overflow-hidden">
-                  {line.imageUrl ? (
-                    <img src={line.imageUrl} alt={line.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/10">
-                      <Train className="w-12 h-12 text-primary/50" />
-                    </div>
-                  )}
-                  <div className="absolute top-2 left-2 px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">
-                    {line.significance}
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5">
+                    <img 
+                            src={station.imageUrl} 
+                            alt={station.name} 
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                    />
                   </div>
+                  <div className="absolute top-2 left-2 px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">Heritage</div>
                 </div>
 
                 <CardContent className="p-6 space-y-4">
                   <div>
-                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors mb-2 text-center">{line.name}</h3>
-                    <p className="text-sm text-foreground mb-3 text-center font-medium">Length: <b>{line.length}</b></p>
+                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors mb-2 text-center">{station.name}</h3>
+                    <p className="text-sm text-foreground mb-3 text-center font-medium">Established: <b>{station.established}</b></p>
                   </div>
-                  <p className="text-muted-foreground text-sm line-clamp-3">{line.significance} — {line.traffic}</p>
-                  <Button variant="ghost" className="w-full group/btn text-primary hover:bg-primary/10" onClick={() => navigate(`/details/${line.slug}`)}>
+                  <p className="text-muted-foreground text-sm line-clamp-3">{station.description}</p>
+                  {/* features removed as requested */}
+
+                  <Button variant="ghost" className="w-full text-primary hover:bg-primary/10 mt-4" onClick={() => navigate(`/details/${station.slug}`)}>
                     Read Details
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -334,29 +368,30 @@ const RailTransport = () => {
           </div>
         </section>
 
-        {/* Heritage Stations */}
+        {/* Major Railway Lines & Routes (Road-style cards, features shown, no Read Details) */}
         <section id="stations" className="mb-24">
-          <h2 className="text-4xl font-extrabold mb-8 text-center">Heritage Railway Stations</h2>
+          <h2 className="text-4xl font-extrabold mb-8 text-center">Major Railway Lines & Routes</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {majorStations.map((station, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card border border-border">
-                <CardContent className="p-8">
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-bold group-hover:text-primary transition-colors mb-2">
-                      {station.name}
-                    </h3>
-                    <p className="text-sm text-primary font-semibold">Established: {station.established}</p>
+            {railwayLines.map((line, index) => (
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden bg-card border-border">
+                {/* <div className="relative h-32 overflow-hidden">
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5">
+                    <Train className="w-12 h-12 text-primary/40" />
                   </div>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{station.description}</p>
-                  <div className="space-y-2">
-                    <p className="text-sm font-semibold text-muted-foreground">Key Features:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {station.features.map((feature, i) => (
-                        <span key={i} className="bg-muted/20 text-foreground text-xs px-3 py-1 rounded-full font-semibold border border-border">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="absolute top-2 left-2 px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">{line.significance}</div>
+                </div> */}
+
+                <CardContent className="p-6 space-y-4">
+                  <div>
+                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors mb-2 text-center">{line.name}</h3>
+                    <p className="text-sm text-foreground mb-3 text-center font-medium">Length: <b>{line.length}</b> · Established: <b>{line.established}</b></p>
+                  </div>
+                  <p className="text-muted-foreground text-sm line-clamp-3">{line.significance} — {line.traffic}</p>
+
+                  <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                    {line.features && line.features.map((f, i) => (
+                      <span key={i} className="bg-muted/20 text-foreground text-xs px-3 py-1 rounded-full font-semibold border border-border">{f}</span>
+                    ))}
                   </div>
                 </CardContent>
               </Card>

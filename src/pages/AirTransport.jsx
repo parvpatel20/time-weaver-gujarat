@@ -75,7 +75,7 @@ const AirTransport = () => {
       destinations: '100+',
       significance: 'Primary gateway for Gujarat',
       slug: 'svpi-airport',
-      imageUrl: '/src/assets/air_svpi.jpg'
+      imageUrl: '/src/assets/sardar_air.png'
     },
     {
       name: 'Surat International Airport',
@@ -87,7 +87,7 @@ const AirTransport = () => {
       destinations: '25+',
       significance: 'South Gujarat gateway'
       ,slug: 'surat-airport',
-      imageUrl: '/src/assets/air_surat.jpg'
+      imageUrl: '/src/assets/surat_air.png'
     },
     {
       name: 'Vadodara Airport',
@@ -99,7 +99,7 @@ const AirTransport = () => {
       destinations: '10+',
       significance: 'Regional connector'
       ,slug: 'vadodara-airport',
-      imageUrl: '/src/assets/air_vadodara.jpg'
+      imageUrl: '/src/assets/vad_air.png'
     },
     {
       name: 'Rajkot Airport',
@@ -111,7 +111,7 @@ const AirTransport = () => {
       destinations: '5+',
       significance: 'Western Gujarat hub'
       ,slug: 'rajkot-airport',
-      imageUrl: '/src/assets/air_rajkot.jpg'
+      imageUrl: '/src/assets/raj_air.png'
     }
   ];
 

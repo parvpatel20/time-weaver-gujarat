@@ -100,7 +100,8 @@ const WaterTransport = () => {
       description: 'India\'s first major port post-independence, designated as free trade zone. Handles diverse cargo including petroleum, coal, and containers. Strategic location for North-West trade routes.',
       traffic: '40+ million tonnes annually',
       significance: 'Primary hub for Western India'
-      ,slug: 'kandla-port'
+      ,slug: 'kandla-port',
+      imageUrl: '/src/assets/kand_port.png'
     },
     {
       name: 'Mundra Port',
@@ -109,7 +110,8 @@ const WaterTransport = () => {
       description: 'India\'s largest private port by cargo volume. State-of-the-art container terminals and specialized facilities. Major gateway for international trade.',
       traffic: '150+ million tonnes annually',
       significance: 'Asia\'s leading private port by efficiency'
-      ,slug: 'mundra-port'
+      ,slug: 'mundra-port',
+      imageUrl: '/src/assets/mun_port.png'
     },
     {
       name: 'Pipavav Port',
@@ -118,7 +120,8 @@ const WaterTransport = () => {
       description: 'Private container terminal revolutionizing India\'s container traffic. World-class infrastructure for automotive shipments and general cargo.',
       traffic: '2+ million containers annually',
       significance: 'Gateway for South Gujarat & Rajasthan'
-      ,slug: 'pipavav-port'
+      ,slug: 'pipavav-port',
+      imageUrl: '/src/assets/pipavav_port.png'
     },
     {
       name: 'Bhavnagar Port',
@@ -127,7 +130,8 @@ const WaterTransport = () => {
       description: 'Major port in South Gujarat, gateway to agricultural hinterland. Important for domestic coastal shipping and energy sector.',
       traffic: '20+ million tonnes annually',
       significance: 'Hub for agricultural & coal export'
-      ,slug: 'bhavnagar-port'
+      ,slug: 'bhavnagar-port',
+      imageUrl: '/src/assets/bhav_port.png'
     }
   ];
 

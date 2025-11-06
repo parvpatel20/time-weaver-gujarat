@@ -25,7 +25,7 @@ const RoadTransport = () => {
       length: '1,450 km', 
       significance: 'Primary Trade Route',
       slug: 'nh8',
-      imageUrl: '/src/assets/nh8_placeholder.jpg' // Placeholder
+      imageUrl: '/src/assets/nh8.png' // Placeholder
     },
     { 
       name: 'NH-44 (Srinagar-Kanyakumari)', 
@@ -33,7 +33,7 @@ const RoadTransport = () => {
       length: '3,745 km (India\'s longest)', 
       significance: 'North-South Connector',
       slug: 'nh44',
-      imageUrl: '/src/assets/nh44_placeholder.jpg' // Placeholder
+      imageUrl: '/src/assets/nh44.png' // Placeholder
     },
     { 
       name: 'Mumbai-Ahmedabad Expressway', 
@@ -41,7 +41,7 @@ const RoadTransport = () => {
       length: '396 km', 
       significance: 'Economic Growth Corridor',
       slug: 'mae',
-      imageUrl: '/src/assets/mae_placeholder.jpg' // Placeholder
+      imageUrl: '/src/assets/mum_ahm_exp.png' // Placeholder
     },
     { 
       name: 'GSRTC Network', 
@@ -49,7 +49,7 @@ const RoadTransport = () => {
       length: '73,000+ km', 
       significance: 'Regional Connectivity',
       slug: 'gsrtc',
-      imageUrl: '/src/assets/gsrtc_placeholder.jpg' // Placeholder
+      imageUrl: '/src/assets/gsrtc_network.png' // Placeholder
     },
   ];
 
