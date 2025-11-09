@@ -3,9 +3,31 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import heroImage from '@/assets/hero-transport-evolution.jpg';
-import gujaratMap from '@/assets/gujarat-map-hubs.jpg';
+import one from "@/assets/gsrtc_network.png";
+import two from "@/assets/mundra-port.jpg";
+import three from "@/assets/kandla-port.jpg";
+import four from "@/assets/mum_ahm_exp.png";
+import five from "@/assets/pipavav_port.png";
+import six from "@/assets/raj_air.png";
+import seven from "@/assets/sardar_air.png";
+import eight from "@/assets/Rajkot_junc.png";
+import nine from "@/assets/Surat_junc.png";
+import ten from "@/assets/surat_air.png";
+import { useEffect, useState } from 'react';
 
 const Home = () => {
+  const slides = [one, two, three, four, five, six, seven, eight, nine, ten];
+
+  const [current, setCurrent] = useState(0);
+
+  // Auto-slide every 4 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   const transportCategories = [
     {
       title: 'Roadways',
@@ -56,6 +78,10 @@ const Home = () => {
 
   return (
     <main className="min-h-screen overflow-hidden">
+
+    {/* <GujaratTransportNetworkMap /> */}
+
+
       {/* Hero Section - Enhanced */}
       <section className="relative h-[85vh] overflow-hidden">
         {/* Animated Background Gradient Overlay */}
@@ -229,64 +255,97 @@ const Home = () => {
 
       {/* Gujarat Spotlight - Enhanced */}
       <section className="py-24 bg-gradient-to-br from-amber-50 via-orange-50/50 to-background dark:from-gray-900 dark:via-amber-950/20 dark:to-background relative overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-10 right-10 w-64 h-64 bg-amber-500/5 dark:bg-amber-400/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-orange-500/5 dark:bg-orange-400/5 rounded-full blur-3xl" />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8 animate-fade-in">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 dark:bg-amber-400/10 rounded-full border border-amber-500/20 dark:border-amber-400/20">
-                <MapPin className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-                <span className="text-sm font-bold text-amber-900 dark:text-amber-200">REGIONAL FOCUS</span>
-              </div>
-              
-              <h2 className="text-5xl md:text-6xl font-display font-black text-gray-900 dark:text-white leading-tight">
-                Gujarat: India's Transport Hub
-              </h2>
-              
-              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-                Discover how Gujarat evolved from ancient maritime trade routes at Lothal and Dholavira
-                to becoming a modern transport powerhouse with world-class ports, expressways, and the
-                upcoming bullet train corridor.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  { icon: '🚢', text: 'Major ports: Kandla, Mundra, Mandvi' },
-                  { icon: '🚂', text: 'Western Railway HQ in Ahmedabad' },
-                  { icon: '✈️', text: 'International airport connections' },
-                  { icon: '🛣️', text: 'Extensive highway network (NH-8)' },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 p-4 bg-white dark:bg-gray-800 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-amber-500 dark:hover:border-amber-400 hover:shadow-lg transition-all duration-300 group">
-                    <span className="text-3xl group-hover:scale-125 transition-transform duration-300">{item.icon}</span>
-                    <span className="text-gray-700 dark:text-gray-200 font-bold leading-relaxed">{item.text}</span>
-                  </div>
-                ))}
-              </div>
+      
+      {/* Decorative Elements */}
+      <div className="absolute top-10 right-10 w-64 h-64 bg-amber-500/5 dark:bg-amber-400/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-10 w-96 h-96 bg-orange-500/5 dark:bg-orange-400/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* LEFT TEXT BLOCK */}
+          <div className="space-y-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 dark:bg-amber-400/10 rounded-full border border-amber-500/20 dark:border-amber-400/20">
+              <MapPin className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+              <span className="text-sm font-bold text-amber-900 dark:text-amber-200">REGIONAL FOCUS</span>
             </div>
-            
-            <div className="relative animate-fade-in group">
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
-              
-              <div className="relative">
-                <img
-                  src={gujaratMap}
-                  alt="Gujarat transport hubs map"
-                  className="rounded-2xl shadow-2xl border-4 border-white dark:border-gray-700 group-hover:scale-105 transition-transform duration-500"
-                />
-                
-                {/* Overlay Badge */}
-                <div className="absolute bottom-6 left-6 px-6 py-3 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-xl shadow-xl border-2 border-amber-500/20 dark:border-amber-400/20">
-                  <p className="text-sm font-bold text-gray-600 dark:text-gray-300">Transport Network</p>
-                  <p className="text-2xl font-black text-amber-600 dark:text-amber-400">Gujarat State</p>
+
+            <h2 className="text-5xl md:text-6xl font-display font-black text-gray-900 dark:text-white leading-tight">
+              Gujarat: India's Transport Hub
+            </h2>
+
+            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+              Discover how Gujarat evolved from ancient maritime trade routes at Lothal and Dholavira
+              to becoming a modern transport powerhouse with world-class ports, expressways, and the
+              upcoming bullet train corridor.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { icon: '🚢', text: 'Major ports: Kandla, Mundra, Mandvi' },
+                { icon: '🚂', text: 'Western Railway HQ in Ahmedabad' },
+                { icon: '✈️', text: 'International airport connections' },
+                { icon: '🛣️', text: 'Extensive highway network (NH-8)' },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3 p-4 bg-white dark:bg-gray-800 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-amber-500 dark:hover:border-amber-400 hover:shadow-lg transition-all duration-300 group">
+                  <span className="text-3xl group-hover:scale-125 transition-transform duration-300">
+                    {item.icon}
+                  </span>
+                  <span className="text-gray-700 dark:text-gray-200 font-bold leading-relaxed">
+                    {item.text}
+                  </span>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
+
+          {/* RIGHT: SLIDESHOW */}
+          <div className="relative animate-fade-in group">
+            
+            {/* Glow Effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+
+            <div className="relative w-full h-[420px] overflow-hidden rounded-2xl">
+
+              {slides.map((src, index) => (
+                <img
+                  key={index}
+                  src={src}
+                  alt="Gujarat transport slide"
+                  className={`
+                    absolute inset-0 w-full h-full object-cover rounded-2xl border-4 
+                    border-white dark:border-gray-700 shadow-2xl transition-opacity duration-1000 
+                    ${index === current ? 'opacity-100' : 'opacity-0'}
+                  `}
+                />
+              ))}
+
+              {/* Overlay Badge */}
+              <div className="absolute bottom-6 left-6 px-6 py-3 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-xl shadow-xl border-2 border-amber-500/20 dark:border-amber-400/20">
+                <p className="text-sm font-bold text-gray-600 dark:text-gray-300">Transport Network</p>
+                <p className="text-2xl font-black text-amber-600 dark:text-amber-400">
+                  Gujarat State
+                </p>
+              </div>
+
+              {/* Slide Indicators */}
+              <div className="absolute bottom-6 right-6 flex gap-2">
+                {slides.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      current === i ? 'bg-amber-500 scale-110' : 'bg-gray-400 dark:bg-gray-600'
+                    }`}
+                  />
+                ))}
+              </div>
+
+            </div>
+          </div>
+
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Quick Access Links - Enhanced */}
       <section className="py-24 relative overflow-hidden">
