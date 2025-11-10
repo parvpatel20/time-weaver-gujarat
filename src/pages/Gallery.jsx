@@ -1,183 +1,201 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Image, Calendar } from 'lucide-react';
-import vintageCart from '@/assets/vintage-bullock-cart.jpg';
-import heroImage from '@/assets/hero-transport-evolution.jpg';
+import { Search, Image } from 'lucide-react';
+
+// ROAD IMAGES
+import bullockCart from '@/assets/bullock_cart.png';
+import horseCart from '@/assets/Horse_cart.png';
+import barodaCarriage from '@/assets/Horse-drawn carriage in Baroda.png';
+import oldGsrtc from '@/assets/old_gsrtc.png';
+
+// RAIL IMAGES
+import junagadhOld from '@/assets/junagadh_old_station.png';
+import kalupurOld from '@/assets/kalupur_old_station.jpg';
+import steamTrain from '@/assets/old_steam_train.png';
+import metro from '@/assets/gujarat_metro.png';
+import doubleDecker from '@/assets/double_decker_gujarat.png';
+
+// WATER IMAGES
+import kandlaHistoric from '@/assets/historic_kandla.png';
+import veravalBoats from '@/assets/veraval_boats.png';
+
+// AIR IMAGES
+import oldAirport from '@/assets/ahmedabad_old_airport.png';
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const categories = ['All', 'Road', 'Rail', 'Water', 'Air'];
 
   const galleryItems = [
+    // ROAD
     {
       category: 'Road',
-      title: 'Vintage Bullock Cart',
-      era: 'Historic',
-      year: '1900s',
-      description: 'Traditional transport on Gujarat roads',
-      image: vintageCart,
+      title: 'Bullock Cart',
+      description: 'Traditional two-wheel cart pulled by oxen used across rural Gujarat.',
+      image: bullockCart,
+    },
+    {
+      category: 'Road',
+      title: 'Horse Cart',
+      description: 'Commonly used for goods and passenger mobility in old Gujarat.',
+      image: horseCart,
+    },
+    {
+      category: 'Road',
+      title: 'Horse-Drawn Carriage, Baroda',
+      description: 'Royal-era carriage widely seen in the Baroda princely state.',
+      image: barodaCarriage,
+    },
+    {
+      category: 'Road',
+      title: 'Old Red GSRTC Bus',
+      description: 'Early GSRTC bus that established statewide road connectivity.',
+      image: oldGsrtc,
+    },
+
+    // RAIL
+    {
+      category: 'Rail',
+      title: 'Junagadh Old Station',
+      description: 'Historic Junagadh railway station from the princely era.',
+      image: junagadhOld,
     },
     {
       category: 'Rail',
-      title: 'Transport Evolution',
-      era: 'Historic to Modern',
-      year: 'Various',
-      description: 'Journey from steam to electric',
-      image: heroImage,
+      title: 'Kalupur Old Station',
+      description: 'Old British-era Ahmedabad Kalupur station.',
+      image: kalupurOld,
     },
     {
-      category: 'Road',
-      title: 'Modern Expressway',
-      era: 'Modern',
-      year: '2020s',
-      description: 'Multi-lane highway infrastructure',
-      image: heroImage,
+      category: 'Rail',
+      title: 'Steam Locomotive',
+      description: 'Vintage steam engine used widely across Gujarat’s railway routes.',
+      image: steamTrain,
+    },
+    {
+      category: 'Rail',
+      title: 'Gujarat Metro',
+      description: 'Modern rapid transit connecting Ahmedabad and Gandhinagar.',
+      image: metro,
+    },
+    {
+      category: 'Rail',
+      title: 'Double Decker Train – Gujarat',
+      description: 'Iconic double-decker train operating through major Gujarat routes.',
+      image: doubleDecker,
+    },
+
+    // WATER
+    {
+      category: 'Water',
+      title: 'Historic Kandla Port',
+      description: 'Early development era of Gujarat’s largest cargo port.',
+      image: kandlaHistoric,
     },
     {
       category: 'Water',
-      title: 'Kandla Port',
-      era: 'Modern',
-      year: '1950s-Present',
-      description: 'Major commercial shipping hub',
-      image: heroImage,
+      title: 'Veraval Fishing Boats',
+      description: 'Traditional boats supporting coastal livelihood.',
+      image: veravalBoats,
     },
+
+    // AIR
     {
       category: 'Air',
-      title: 'Sardar Patel Airport',
-      era: 'Modern',
-      year: '1991-Present',
-      description: 'International aviation gateway',
-      image: heroImage,
-    },
-    {
-      category: 'Rail',
-      title: 'Heritage Station',
-      era: 'Historic',
-      year: '1800s',
-      description: 'British-era railway architecture',
-      image: heroImage,
+      title: 'Ahmedabad Old Airport',
+      description: 'Historic terminal of Sardar Vallabhbhai Patel International Airport.',
+      image: oldAirport,
     },
   ];
 
-  const filteredItems =
-    selectedCategory === 'All'
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === selectedCategory);
+  const filteredItems = galleryItems.filter((item) => {
+    const categoryMatch =
+      selectedCategory === 'All' || item.category === selectedCategory;
+
+    const searchMatch =
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase());
+
+    return categoryMatch && searchMatch;
+  });
 
   return (
     <main className="min-h-screen py-12">
       <div className="container mx-auto px-4">
-        {/* Header */}
+
+        {/* HEADER */}
         <div className="text-center mb-12 space-y-4">
           <Image className="h-16 w-16 mx-auto text-accent" />
           <h1 className="text-5xl md:text-6xl font-display font-bold">
-            Visual Gallery
+            Transport History Gallery
           </h1>
-          <p className="text-xl text-muted-foreground italic font-display">
-            Then & Now – A Journey Through Time
+          <p className="text-lg text-muted-foreground italic">
+            Explore Gujarat’s rich evolution across all transport modes.
           </p>
         </div>
 
-        {/* Category Filter */}
+        {/* SEARCH BAR */}
+        <div className="max-w-xl mx-auto mb-10 flex items-center gap-3">
+          <Input
+            placeholder="Search images..."
+            className="focus-visible:ring-accent"
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <Button className="bg-accent hover:bg-accent/80 text-accent-foreground">
+            <Search className="h-5 w-5" />
+          </Button>
+        </div>
+
+        {/* FILTERS */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
+          {categories.map((cat) => (
             <Button
-              key={category}
-              variant={selectedCategory === category ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory(category)}
+              key={cat}
+              variant={selectedCategory === cat ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory(cat)}
               className="min-w-[100px]"
             >
-              {category}
+              {cat}
             </Button>
           ))}
         </div>
 
-        {/* Gallery Grid */}
+        {/* GALLERY GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item, index) => (
             <Card
               key={index}
               className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
             >
+              {/* Image Section */}
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                  {item.era}
+                <div className="absolute top-3 left-3 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                  {item.category}
                 </div>
               </div>
+
+              {/* Text Section */}
               <CardContent className="p-6 space-y-3">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-display font-bold">{item.title}</h3>
-                  <Calendar className="h-5 w-5 text-muted-foreground" />
-                </div>
-                <p className="text-sm text-accent font-semibold">{item.year}</p>
-                <p className="text-muted-foreground">{item.description}</p>
-                <div className="pt-3 border-t border-border">
-                  <span className="text-xs bg-muted px-3 py-1 rounded-full">
-                    {item.category}
-                  </span>
-                </div>
+                <h3 className="text-2xl font-display font-bold">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {item.description}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Then & Now Comparison Section */}
-        <section className="mt-20">
-          <h2 className="text-4xl font-display font-bold text-center mb-12">
-            Comparing Eras
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-gradient-to-br from-card to-muted/30">
-              <CardContent className="p-8 space-y-4">
-                <h3 className="text-3xl font-display font-bold text-accent">
-                  Then
-                </h3>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li>• Manual and animal-powered transport</li>
-                  <li>• Narrow unpaved roads and tracks</li>
-                  <li>• Small wooden ships and boats</li>
-                  <li>• Basic airstrips for military use</li>
-                  <li>• Steam locomotives on limited routes</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-accent/10 to-accent/5">
-              <CardContent className="p-8 space-y-4">
-                <h3 className="text-3xl font-display font-bold text-accent">
-                  Now
-                </h3>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li>• Electric and hybrid vehicles</li>
-                  <li>• Multi-lane expressways and smart highways</li>
-                  <li>• World-class ports handling mega ships</li>
-                  <li>• International airports with modern terminals</li>
-                  <li>• High-speed rail and metro systems</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Note */}
-        <div className="mt-12 text-center">
-          <Card className="bg-accent/5 border-accent/20">
-            <CardContent className="p-6">
-              <p className="text-muted-foreground">
-                This gallery showcases historical and modern transport images. Many photographs
-                are preserved in archives and museums across Gujarat, documenting the state's
-                remarkable transformation.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </main>
   );
