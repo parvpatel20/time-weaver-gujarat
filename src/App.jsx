@@ -13,6 +13,7 @@ import AirTransport from "./pages/AirTransport";
 import Gallery from "./pages/Gallery";
 import Archives from "./pages/Archives";
 import Articles from "./pages/Articles";
+import Questionnaire from "./pages/Questionnaire";
 // import VirtualTour from "./pages/VirtualTour";
 import Quiz from "./pages/Quiz";
 import About from "./pages/About";
@@ -60,6 +61,7 @@ const router = createBrowserRouter(
         {/* <Route path="virtual-tour" element={<VirtualTour />} /> */}
         <Route path="quiz" element={<Quiz />} />
         <Route path="about" element={<About />} />
+  <Route path="questionnaire" element={<Questionnaire />} />
         <Route path="details/nh8" element={<NH8Detail />} />
   <Route path="details/nh44" element={<NH44Detail />} />
         <Route path="details/ahmedabad-junction" element={<AhmedabadJunctionDetail />} />

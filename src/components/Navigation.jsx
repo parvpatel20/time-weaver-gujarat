@@ -17,6 +17,7 @@ const Navigation = () => {
     { name: 'Gallery', path: '/gallery' },
     { name: 'Archives', path: '/archives' },
     { name: 'Articles', path: '/articles' },
+  { name: 'Questionnaire', path: '/questionnaire' },
     // { name: 'Virtual Tour', path: '/virtual-tour' },
     { name: 'Quiz', path: '/quiz' },
     { name: 'About', path: '/about' },

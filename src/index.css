@@ -92,6 +92,31 @@ All colors MUST be HSL.
   }
 }
 
+@layer components {
+  /* Lead paragraph style used across pages */
+  .lead {
+    @apply text-lg text-muted-foreground max-w-3xl mx-auto;
+  }
+
+  /* Section title with small left accent bar */
+  .section-title {
+    @apply flex items-center gap-3;
+  }
+  .section-accent {
+    @apply w-1 h-6 rounded bg-accent/90; /* small decorative bar */
+  }
+
+  /* Enhanced input visuals for forms on pages */
+  .input-enhanced {
+    @apply ring-1 ring-input focus:ring-2 focus:ring-accent rounded-md;
+  }
+
+  /* Card visual lift */
+  .card-visual {
+    @apply rounded-2xl shadow-lg border border-border;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
