@@ -31,6 +31,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
+            <img
+    src="/logo.png"
+    alt="Wheels of Time Logo"
+    className="w-8 h-8 object-contain"
+  />
             <div className="text-2xl font-display font-bold text-primary group-hover:text-accent transition-colors">
               Wheels of Time
             </div>

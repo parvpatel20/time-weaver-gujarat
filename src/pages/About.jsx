@@ -10,7 +10,14 @@ const About = () => {
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <Heart className="h-16 w-16 mx-auto text-accent" />
+
+          {/* ✅ Added big logo here */}
+          <img
+            src="/logo.png"
+            alt="Wheels of Time Logo"
+            className="w-40 h-40 mx-auto object-contain drop-shadow-lg"
+          />
+
           <h1 className="text-5xl md:text-6xl font-display font-bold">
             About Wheels of Time
           </h1>
@@ -55,9 +62,9 @@ const About = () => {
                   'Digitized documents, photographs, and records from museums and government archives',
               },
               {
-                title: 'Virtual Tours',
+                title: 'Gallery',
                 description:
-                  'Immersive 360° experiences of transport landmarks across Gujarat',
+                  'A curated visual collection featuring rare photographs, transport artifacts, historical vehicles, and landmark moments from Gujarat’s transport evolution.',
               },
               {
                 title: 'Educational Content',
@@ -118,47 +125,6 @@ const About = () => {
                   <span>Local historians, researchers, and community members</span>
                 </li>
               </ul>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Contact Form */}
-        <section>
-          <Card className="bg-gradient-to-br from-card to-muted/30">
-            <CardContent className="p-12 space-y-6">
-              <div className="flex items-center gap-4 mb-4">
-                <Mail className="h-12 w-12 text-accent" />
-                <h2 className="text-4xl font-display font-bold">Get in Touch</h2>
-              </div>
-              <p className="text-lg text-muted-foreground">
-                Have questions, suggestions, or materials to contribute? We'd love to hear from you!
-              </p>
-              <form className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Name</label>
-                    <Input placeholder="Your name" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
-                    <Input type="email" placeholder="your.email@example.com" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Subject</label>
-                  <Input placeholder="What is this about?" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
-                  <Textarea
-                    placeholder="Share your thoughts, questions, or contributions..."
-                    rows={6}
-                  />
-                </div>
-                <Button size="lg" className="w-full md:w-auto">
-                  Send Message
-                </Button>
-              </form>
             </CardContent>
           </Card>
         </section>
