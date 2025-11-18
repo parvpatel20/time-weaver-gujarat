@@ -5,24 +5,24 @@ import { Button } from '@/components/ui/button';
 import { Search, Image } from 'lucide-react';
 
 // ROAD IMAGES
-import bullockCart from '@/assets/bullock_cart.png';
-import horseCart from '@/assets/Horse_cart.png';
-import barodaCarriage from '@/assets/Horse-drawn carriage in Baroda.png';
-import oldGsrtc from '@/assets/old_gsrtc.png';
+const bullockCart = '/assets/bullock_cart.png';
+const horseCart = '/assets/Horse_cart.png';
+const barodaCarriage = '/assets/Horse-drawn carriage in Baroda.png';
+const oldGsrtc = '/assets/old_gsrtc.png';
 
 // RAIL IMAGES
-import junagadhOld from '@/assets/junagadh_old_station.png';
-import kalupurOld from '@/assets/kalupur_old_station.jpg';
-import steamTrain from '@/assets/old_steam_train.png';
-import metro from '@/assets/gujarat_metro.png';
-import doubleDecker from '@/assets/double_decker_gujarat.png';
+const junagadhOld = '/assets/junagadh_old_station.png';
+const kalupurOld = '/assets/kalupur_old_station.jpg';
+const steamTrain = '/assets/old_steam_train.png';
+const metro = '/assets/gujarat_metro.png';
+const doubleDecker = '/assets/double_decker_gujarat.png';
 
 // WATER IMAGES
-import kandlaHistoric from '@/assets/historic_kandla.png';
-import veravalBoats from '@/assets/veraval_boats.png';
+const kandlaHistoric = '/assets/historic_kandla.png';
+const veravalBoats = '/assets/veraval_boats.png';
 
 // AIR IMAGES
-import oldAirport from '@/assets/ahmedabad_old_airport.png';
+const oldAirport = '/assets/ahmedabad_old_airport.png';
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

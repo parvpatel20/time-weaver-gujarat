@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, MapPin, Calendar, TrendingUp } from 'lucide-react';
-import maHighwayImage from '@/assets/mum_ahm_exp.png';
+const maHighwayImage = '/assets/mum_ahm_exp.png';
 
 const MAEDetail = () => {
   return (

@@ -79,7 +79,7 @@ const RailTransport = () => {
       description: 'The primary railway station and headquarters of Western Railway zone. Built during the British era with impressive Victorian architecture.',
       features: ['Heritage building', 'Western Railway HQ', 'Major junction', 'Historic platforms'],
       slug: 'ahmedabad-junction',
-      imageUrl: '/src/assets/ahm_junc.png' // Placeholder
+      imageUrl: '/assets/ahm_junc.png' // Placeholder
     },
     {
       name: 'Vadodara Junction',
@@ -87,7 +87,7 @@ const RailTransport = () => {
       description: 'Historic railway station featuring Indo-Saracenic architecture. Built during the princely state era, maintaining its royal heritage.',
       features: ['Royal architecture', 'Strategic junction', 'Heritage monument', 'International heritage site'],
       slug: 'vadodara-junction',
-      imageUrl: '/src/assets/vadodara_junc.png' // Placeholder
+      imageUrl: '/assets/vadodara_junc.png' // Placeholder
     },
     {
       name: 'Surat Railway Station',
@@ -95,7 +95,7 @@ const RailTransport = () => {
       description: 'Important junction connecting southern Gujarat to northern India. Serves as gateway to South Gujarat region.',
       features: ['Major junction', 'Port connectivity', 'Commercial hub', 'Passenger traffic center'],
       slug: 'surat-railway-station',
-      imageUrl: '/src/assets/Surat_junc.png' // Placeholder
+      imageUrl: '/assets/Surat_junc.png' // Placeholder
 
     },
     {
@@ -104,7 +104,7 @@ const RailTransport = () => {
       description: 'Key railway station in western Gujarat connecting to major industrial and agricultural areas.',
       features: ['Regional hub', 'Industrial connectivity', 'Freight center', 'Agricultural trade'],
       slug: 'rajkot-junction',
-      imageUrl: '/src/assets/Rajkot_junc.png' // Placeholder
+      imageUrl: '/assets/Rajkot_junc.png' // Placeholder
     }
   ];
 
@@ -116,7 +116,7 @@ const RailTransport = () => {
     significance: 'Primary trunk route connecting two major metropolitan areas',
     traffic: 'Heavy passenger and freight traffic',
     slug: 'mumbai-ahmedabad-line',
-    imageUrl: '/src/assets/mumbai_ahmedabad_placeholder.jpg',
+    imageUrl: '/assets/mumbai_ahmedabad_placeholder.jpg',
     features: [
       'First major BB&CI Railway route',
       'Electrified double line',
@@ -131,7 +131,7 @@ const RailTransport = () => {
     significance: 'One of India\'s oldest and busiest railway corridors',
     traffic: 'Millions of passengers annually',
     slug: 'ahmedabad-vadodara-bombay',
-    imageUrl: '/src/assets/ahmedabad_vadodara_placeholder.jpg',
+    imageUrl: '/assets/ahmedabad_vadodara_placeholder.jpg',
     features: [
       'Part of early BB&CI line',
       'Key to Gujarat’s industrial growth',
@@ -146,7 +146,7 @@ const RailTransport = () => {
     significance: 'Comprehensive network connecting all major cities',
     traffic: 'Pan-state connectivity',
     slug: 'gujarat-broad-gauge',
-    imageUrl: '/src/assets/gujarat_broad_gauge_placeholder.jpg',
+    imageUrl: '/assets/gujarat_broad_gauge_placeholder.jpg',
     features: [
       'Covers all major cities',
       'Converted under Project Unigauge',
@@ -161,7 +161,7 @@ const RailTransport = () => {
     significance: 'Modern freight transport optimized for logistics',
     traffic: 'Containers, coal, agriculture, goods',
     slug: 'western-dfc',
-    imageUrl: '/src/assets/western_dfc_placeholder.jpg',
+    imageUrl: '/assets/western_dfc_placeholder.jpg',
     features: [
       'Freight-only electrified corridor',
       'Reduces road congestion',
@@ -211,7 +211,7 @@ const RailTransport = () => {
         {/* Hero - high contrast overlay, similar to RoadTransport */}
         <div className="relative mb-20 rounded-xl overflow-hidden shadow-2xl group transition-transform duration-500 hover:scale-[1.01]">
           <img
-            src="/src/assets/Rail_Transport.jpg"
+            src="/assets/Rail_Transport.jpg"
             alt="Historic Rail Transport in Gujarat"
             className="w-full h-[520px] object-cover object-center transition-all duration-700 opacity-80 group-hover:opacity-100"
           />

@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Plane, Calendar, TrendingUp, Users } from "lucide-react";
-import vadodaraAirportImage from "@/assets/vad_air.png";
+const vadodaraAirportImage = '/assets/vad_air.png';
 
 const VadodaraAirportDetail = () => {
   return (

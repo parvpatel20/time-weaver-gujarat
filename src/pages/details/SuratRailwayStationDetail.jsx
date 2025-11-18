@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Train, Calendar, Users, MapPin } from 'lucide-react';
-import suratImage from '@/assets/Surat_junc.png';
+const suratImage = '/assets/Surat_junc.png';
 
 const SuratRailwayStationDetail = () => {
   return (

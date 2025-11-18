@@ -75,7 +75,7 @@ const AirTransport = () => {
       destinations: '100+',
       significance: 'Primary gateway for Gujarat',
       slug: 'svpi-airport',
-      imageUrl: '/src/assets/sardar_air.png'
+      imageUrl: '/assets/sardar_air.png'
     },
     {
       name: 'Surat International Airport',
@@ -87,7 +87,7 @@ const AirTransport = () => {
       destinations: '25+',
       significance: 'South Gujarat gateway'
       ,slug: 'surat-airport',
-      imageUrl: '/src/assets/surat_air.png'
+      imageUrl: '/assets/surat_air.png'
     },
     {
       name: 'Vadodara Airport',
@@ -99,7 +99,7 @@ const AirTransport = () => {
       destinations: '10+',
       significance: 'Regional connector'
       ,slug: 'vadodara-airport',
-      imageUrl: '/src/assets/vad_air.png'
+      imageUrl: '/assets/vad_air.png'
     },
     {
       name: 'Rajkot Airport',
@@ -111,7 +111,7 @@ const AirTransport = () => {
       destinations: '5+',
       significance: 'Western Gujarat hub'
       ,slug: 'rajkot-airport',
-      imageUrl: '/src/assets/raj_air.png'
+      imageUrl: '/assets/raj_air.png'
     }
   ];
 
@@ -174,7 +174,7 @@ const AirTransport = () => {
         {/* Hero - high contrast overlay */}
         <div className="relative mb-20 rounded-xl overflow-hidden shadow-2xl group transition-transform duration-500 hover:scale-[1.01]">
           <img
-            src="/src/assets/Air_Transport.jpg"
+            src="/assets/Air_Transport.jpg"
             alt="Air Transport of Gujarat"
             className="w-full h-[520px] object-cover object-center transition-all duration-700 opacity-80 group-hover:opacity-100"
           />

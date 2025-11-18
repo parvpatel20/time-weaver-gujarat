@@ -2,17 +2,17 @@ import { ArrowRight, Train, Ship, Plane, Car, Sparkles, Clock, MapPin } from 'lu
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import heroImage from '@/assets/hero-transport-evolution.jpg';
-import one from "@/assets/gsrtc_network.png";
-import two from "@/assets/mundra-port.jpg";
-import three from "@/assets/kandla-port.jpg";
-import four from "@/assets/mum_ahm_exp.png";
-import five from "@/assets/pipavav_port.png";
-import six from "@/assets/raj_air.png";
-import seven from "@/assets/sardar_air.png";
-import eight from "@/assets/Rajkot_junc.png";
-import nine from "@/assets/Surat_junc.png";
-import ten from "@/assets/surat_air.png";
+const heroImage = '/assets/hero-transport-evolution.jpg';
+const one = '/assets/gsrtc_network.png';
+const two = '/assets/mundra-port.jpg';
+const three = '/assets/kandla-port.jpg';
+const four = '/assets/mum_ahm_exp.png';
+const five = '/assets/pipavav_port.png';
+const six = '/assets/raj_air.png';
+const seven = '/assets/sardar_air.png';
+const eight = '/assets/Rajkot_junc.png';
+const nine = '/assets/Surat_junc.png';
+const ten = '/assets/surat_air.png';
 import { useEffect, useState } from 'react';
 
 const Home = () => {

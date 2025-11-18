@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, MapPin, Calendar, TrendingUp } from 'lucide-react';
-import nh44Image from '@/assets/nh44.png';
+const nh44Image = '/assets/nh44.png';
 
 const NH44Detail = () => {
   return (

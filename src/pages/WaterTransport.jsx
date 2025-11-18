@@ -101,7 +101,7 @@ const WaterTransport = () => {
       traffic: '40+ million tonnes annually',
       significance: 'Primary hub for Western India'
       ,slug: 'kandla-port',
-      imageUrl: '/src/assets/kand_port.png'
+      imageUrl: '/assets/kand_port.png'
     },
     {
       name: 'Mundra Port',
@@ -111,7 +111,7 @@ const WaterTransport = () => {
       traffic: '150+ million tonnes annually',
       significance: 'Asia\'s leading private port by efficiency'
       ,slug: 'mundra-port',
-      imageUrl: '/src/assets/mun_port.png'
+      imageUrl: '/assets/mun_port.png'
     },
     {
       name: 'Pipavav Port',
@@ -121,7 +121,7 @@ const WaterTransport = () => {
       traffic: '2+ million containers annually',
       significance: 'Gateway for South Gujarat & Rajasthan'
       ,slug: 'pipavav-port',
-      imageUrl: '/src/assets/pipavav_port.png'
+      imageUrl: '/assets/pipavav_port.png'
     },
     {
       name: 'Bhavnagar Port',
@@ -131,7 +131,7 @@ const WaterTransport = () => {
       traffic: '20+ million tonnes annually',
       significance: 'Hub for agricultural & coal export'
       ,slug: 'bhavnagar-port',
-      imageUrl: '/src/assets/bhav_port.png'
+      imageUrl: '/assets/bhav_port.png'
     }
   ];
 
@@ -211,7 +211,7 @@ const WaterTransport = () => {
         {/* Hero */}
         <div className="relative mb-20 rounded-xl overflow-hidden shadow-2xl group transition-transform duration-500 hover:scale-[1.01]">
           <img
-            src="/src/assets/Water_Transport.webp"
+            src="/assets/Water_Transport.webp"
             alt="Historic Water Transport in Gujarat"
             className="w-full h-[520px] object-cover object-center transition-all duration-700 opacity-80 group-hover:opacity-100"
           />

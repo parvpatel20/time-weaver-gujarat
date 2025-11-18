@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Train, Calendar, Users, MapPin } from 'lucide-react';
-import vadodaraImage from '@/assets/vadodara_junc.png';
+const vadodaraImage = '/assets/vadodara_junc.png';
 
 const VadodaraJunctionDetail = () => {
   return (

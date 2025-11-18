@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Plane, Calendar, TrendingUp, MapPin } from "lucide-react";
-import suratAirportImage from "@/assets/surat_air.png";
+const suratAirportImage = '/assets/surat_air.png';
 
 const SuratAirportDetail = () => {
   return (

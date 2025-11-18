@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Ship, Calendar, TrendingUp } from 'lucide-react';
-import bhavnagarImage from '@/assets/bhav_port.png';
+const bhavnagarImage = '/assets/bhav_port.png';
 
 const BhavnagarPortDetail = () => {
   return (

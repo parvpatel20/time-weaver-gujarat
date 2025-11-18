@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Building, Calendar, Users, Train } from 'lucide-react';
-import stationImage from '@/assets/ahm_junc.png';
+const stationImage = '/assets/ahm_junc.png';
 
 const AhmedabadJunctionDetail = () => {
   return (
