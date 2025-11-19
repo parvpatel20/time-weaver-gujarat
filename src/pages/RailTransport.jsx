@@ -307,7 +307,7 @@ const RailTransport = () => {
 
         {/* Timeline Section */}
         <section id="timeline" className="mb-24">
-          <h2 className="text-4xl font-extrabold mb-12">Evolution Timeline: Tracks of Change 🚆</h2>
+          <h2 className="text-4xl font-extrabold mb-12">Evolution Timeline: Tracks of Change</h2>
           <div className="relative border-l-4 border-primary/50 space-y-12 ml-4 md:ml-12">
             {milestones.map((item, index) => (
               <div key={index} className="relative pl-8 md:pl-16">
@@ -571,7 +571,7 @@ const RailTransport = () => {
 
         {/* Call to Action */}
         <section className="bg-primary/10 rounded-xl p-12 text-center border border-primary/30 shadow-xl">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Explore More Transport History 🌍</h2>
+          <h2 className="text-3xl font-bold mb-4 text-primary">Explore More Transport History</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Learn about how roads, air transport, and maritime routes shaped Gujarat's development alongside railways.
           </p>

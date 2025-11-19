@@ -139,7 +139,7 @@ const RoadTransport = () => {
         {/* --- 4. Historical Periods (Icon Enhancement and Readability) --- */}
         <section id="historical-periods" className="mb-24">
           <h2 className="text-4xl font-extrabold mb-12 text-center border-b-2 border-border pb-4">
-            Historical Periods of Road Development 📜
+            Historical Periods of Road Development
           </h2>
           <div className="grid md:grid-cols-2 gap-10">
             {historicalPeriods.map((period, index) => (
@@ -165,7 +165,7 @@ const RoadTransport = () => {
         {/* --- 5. Detailed Timeline (Visual Timeline Structure) --- */}
         <section id="timeline" className="mb-24">
           <h2 className="text-4xl font-extrabold mb-12">
-            Evolution Timeline: The Road to Modernity 🛣️
+            Evolution Timeline: The Road to Modernity
           </h2>
           <div className="relative border-l-4 border-primary/50 space-y-12 ml-4 md:ml-12">
             {timeline.map((item, index) => (
@@ -195,7 +195,7 @@ const RoadTransport = () => {
         {/* --- 6. Major Highways (Now includes image section) --- */}
         <section className="mb-24">
           <h2 className="text-4xl font-extrabold mb-12 text-center">
-            Major Highways & Transport Networks 🔗
+            Major Highways & Transport Networks
           </h2>
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
             {highways.map((highway, index) => (
@@ -244,7 +244,7 @@ const RoadTransport = () => {
         {/* --- 7. Major Cities Connected (Clean, Readable List) --- */}
         <section className="mb-24">
           <h2 className="text-4xl font-extrabold mb-8 text-center">
-            Key Cities Connected by Roads 🏙️
+            Key Cities Connected by Roads
           </h2>
           <div className="grid md:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {majorCities.map((city, index) => (
@@ -264,7 +264,7 @@ const RoadTransport = () => {
         {/* --- 8. Vintage vs Modern (Semantic Color Contrast) --- */}
         <section className="mb-24">
           <h2 className="text-4xl font-extrabold mb-12 text-center">
-            Then & Now: A Contrast in Transport 🔄
+            Then & Now: A Contrast in Transport
           </h2>
           <div className="grid md:grid-cols-2 gap-10">
             <Card className="border-destructive/30 hover:shadow-xl transition-shadow bg-card/70">
@@ -318,7 +318,7 @@ const RoadTransport = () => {
         {/* --- 9. Fun Facts (Clear Contrast and Hover) --- */}
         <section className="mb-24">
           <h2 className="text-4xl font-extrabold mb-12 text-center">
-            Fascinating Facts & Achievements 💡
+            Fascinating Facts & Achievements
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {funFacts.map((item, index) => (
@@ -343,7 +343,7 @@ const RoadTransport = () => {
         {/* --- 10. Challenges & Solutions (Checkmark/X Icon and Semantic Colors) --- */}
         <section className="mb-24">
           <h2 className="text-4xl font-extrabold mb-12 text-center">
-            Challenges & Modern Solutions ✅
+            Challenges & Modern Solutions
           </h2>
           <div className="grid md:grid-cols-2 gap-10">
             <Card className="border-destructive/30 hover:shadow-lg transition-shadow bg-card/70">
@@ -399,7 +399,7 @@ const RoadTransport = () => {
         {/* --- 11. Call to Action --- */}
         <section className="bg-primary/10 rounded-xl p-12 text-center border border-primary/30 shadow-xl">
           <h2 className="text-3xl font-bold mb-4 text-primary">
-            Explore More Transport History 🌍
+            Explore More Transport History
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Learn about how railways, air transport, and maritime routes shaped Gujarat's development.
