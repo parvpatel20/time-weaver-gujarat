@@ -122,12 +122,7 @@ const AirTransport = () => {
       description: '8th busiest airport in India'
     },
     {
-      metric: '100+',
-      label: 'International destinations connected',
-      description: 'Global connectivity from Ahmedabad'
-    },
-    {
-      metric: '4,000+ Cr',
+      metric: '$8 trillion+',
       label: 'Annual air cargo value',
       description: 'Supporting export economy'
     },
@@ -192,7 +187,7 @@ const AirTransport = () => {
 
         {/* Quick Stats */}
         <div className="mb-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {economicImpact.map((s, i) => (
               <div key={i} className="bg-card p-6 rounded-xl border border-border text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.03]">
                 <div className="text-4xl md:text-5xl font-extrabold text-primary mb-1">{s.metric}</div>

@@ -132,7 +132,7 @@ const About = () => {
         {/* Footer Note */}
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Wheels of Time. Dedicated to preserving Gujarat's transport heritage for future
+            © 2025 Wheels of Time. Dedicated to preserving Gujarat's transport heritage for future
             generations.
           </p>
         </div>

@@ -179,8 +179,8 @@ const RailTransport = () => {
       description: 'Comprehensive railway network across all districts'
     },
     {
-      metric: '50+',
-      label: 'Major railway stations',
+      metric: '149',
+      label: 'Railway stations',
       description: 'Connecting cities and towns across Gujarat'
     },
     {

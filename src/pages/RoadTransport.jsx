@@ -22,7 +22,7 @@ const RoadTransport = () => {
     { 
       name: 'NH-8 (Delhi-Mumbai Highway)', 
       description: 'Spanning 1,450 km, this national highway passes through Gujarat, connecting northern and western India. A vital economic corridor for trade and commerce.', 
-      length: '1,450 km', 
+      length: 'Nearly 1,450 km', 
       significance: 'Primary Trade Route',
       slug: 'nh8',
       imageUrl: '/assets/nh8.png' // Placeholder
@@ -63,7 +63,7 @@ const RoadTransport = () => {
   const economicImpact = [
     { metric: '73,000+', label: 'km of Road Network', description: 'Comprehensive connectivity across all districts' },
     { metric: '₹50,000+', label: 'Crores in Logistics Value', description: 'Annual commercial activity through roads' },
-    { metric: '500+', label: 'GSRTC Bus Fleet', description: 'Serving millions of passengers daily' },
+    { metric: '8000+', label: 'GSRTC Bus Fleet', description: 'Serving millions of passengers daily' },
     { metric: '24/7', label: 'Highway Connectivity', description: 'All-weather road access to major cities' }
   ];
   

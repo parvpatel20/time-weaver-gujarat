@@ -128,7 +128,7 @@ const WaterTransport = () => {
       established: '1967',
       cargo: 'Coal, salt, general cargo',
       description: 'Major port in South Gujarat, gateway to agricultural hinterland. Important for domestic coastal shipping and energy sector.',
-      traffic: '20+ million tonnes annually',
+      traffic: '1+ million tonnes annually',
       significance: 'Hub for agricultural & coal export'
       ,slug: 'bhavnagar-port',
       imageUrl: '/assets/bhav_port.png'
@@ -172,8 +172,8 @@ const WaterTransport = () => {
       description: 'Largest maritime cargo hub in India'
     },
     {
-      metric: '10+',
-      label: 'Major ports and harbors',
+      metric: '49',
+      label: '1 Major port and 48 non major ports',
       description: 'Including private and public ports'
     },
     {
